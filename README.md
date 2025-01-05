@@ -1,0 +1,2 @@
+# Incorrect Usage of $inc Operator in MongoDB Aggregation
+This example demonstrates an incorrect use of the `$inc` operator in a MongoDB aggregation pipeline. The `$inc` operator is designed to increment an existing field, but in this case, we attempt to increment the `total` field by an additional value using  `{ $inc: "$total", 1 }` which leads to an error.  The correct approach is to perform the incrementation directly within the `$group` stage using the `$sum` operator. 
